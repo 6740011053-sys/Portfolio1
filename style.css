@@ -16,7 +16,6 @@ body{
 }
 
 
-/* HEADER */
 header{
   position:sticky;
   top:0;
@@ -51,7 +50,7 @@ header{
   border-bottom:2px solid #a855f7;
 }
 
-/* HERO */
+
 .hero h1{
   font-size:52px;
   font-weight:800;
@@ -95,7 +94,6 @@ header{
   margin-bottom:25px;
 }
 
-/* PROFILE */
 .profile-img{
   width:220px;
   height:220px;
@@ -109,7 +107,6 @@ header{
   animation:none;
 }
 
-/* BUTTON */
 .btn{
   display:inline-block;
   padding:12px 30px;
@@ -126,7 +123,6 @@ header{
   border:2px solid #d8b4fe;
 }
 
-/* SECTION */
 section{
   max-width:1100px;
   margin:100px auto;
@@ -140,7 +136,6 @@ section h2{
   color:#3f3d56;
 }
 
-/* ABOUT */
 .about-card{
   max-width:700px;
   margin:auto;
@@ -151,7 +146,6 @@ section h2{
   box-shadow:0 20px 40px rgba(0,0,0,.12);
 }
 
-/* SKILLS */
 .skill{
   background:#ffffff;
   padding:20px;
@@ -169,11 +163,12 @@ section h2{
 
 .bar div{
   height:100%;
+  width: var(--w);    
   background:linear-gradient(90deg,#ec4899,#a855f7);
   border-radius:10px;
 }
 
-/* WORK */
+
 .work-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -211,7 +206,6 @@ section h2{
   backdrop-filter:blur(4px);
 }
 
-/* CONTACT */
 form{
   max-width:400px;
   margin:auto;
@@ -239,7 +233,6 @@ button{
   border-radius:5px;
 }
 
-/* FOOTER */
 footer{
   background:linear-gradient(135deg,#fbcfe8,#e9d5ff);
   color:#3f3d56;
@@ -253,7 +246,6 @@ footer small{
   opacity:.7;
 }
 
-/* TOP BUTTON */
 #topBtn{
   position:fixed;
   bottom:30px;
@@ -271,7 +263,6 @@ footer small{
   box-shadow:0 0 15px rgba(168,85,247,.7);
 }
 
-/* HOVER LUXURY */
 .about-card:hover,
 .skill:hover,
 .card:hover,
@@ -283,7 +274,6 @@ form:hover{
   transition:.4s;
 }
 
-/* RESPONSIVE */
 @media(max-width:768px){
   .navbar ul{display:none}
   .hero h1{font-size:36px}
