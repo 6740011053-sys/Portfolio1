@@ -305,3 +305,126 @@ form:hover{
   transform:translateY(-4px);
   box-shadow:0 15px 30px rgba(128,0,128,.4);
 }
+.btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s ease;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,.6),
+    transparent
+  );
+  transition: .6s;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.btn::after {
+  content: " ➜";
+  display: inline-block;
+  transition: transform .3s ease;
+}
+
+.btn:hover::after {
+  transform: translateX(8px);
+}
+
+.btn.outline::after {
+  color: #a855f7;
+}
+
+
+@keyframes floatHero {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.profile-img {
+  animation: glow 4s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow:
+      0 0 20px rgba(236,72,153,.4),
+      0 0 40px rgba(168,85,247,.4);
+  }
+  to {
+    box-shadow:
+      0 0 35px rgba(236,72,153,.8),
+      0 0 60px rgba(168,85,247,.8);
+  }
+}
+
+.about-card,
+.skill,
+.card,
+.work-link,
+form {
+  transition: transform .4s ease, box-shadow .4s ease;
+}
+
+.about-card:hover,
+.skill:hover,
+.card:hover,
+.work-link:hover,
+form:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+#topBtn {
+  transition: all .6s ease;
+}
+
+#topBtn:hover {
+  transform: rotate(360deg) scale(1.15);
+  box-shadow: 0 0 20px rgba(168,85,247,.8);
+}
+.about-card,
+.skill,
+.card,
+form {
+  box-shadow:
+    0 15px 30px rgba(0,0,0,.15),
+    0 0 40px rgba(236,72,153,.25),
+    0 0 60px rgba(168,85,247,.25);
+}
+body::after {
+  content: "";
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(168,85,247,.4), transparent 60%);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  animation: cursorGlow 2s infinite alternate;
+}
+
+@keyframes cursorGlow {
+  from { opacity: .4; }
+  to { opacity: .8; }
+}
+.bar div {
+  background-size: 200% 100%;
+  animation: wave 3s linear infinite;
+}
+
+@keyframes wave {
+  from { background-position: 0% 50%; }
+  to { background-position: 200% 50%; }
+}
+
